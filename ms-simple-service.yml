@@ -1,6 +1,9 @@
+server:
+   port: 8060
+   
 ie:
    jor:
       simpleservice:
-         config1: config1Value
+         config1: config1Value-springConfigServer
          
          
