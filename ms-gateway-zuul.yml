@@ -3,6 +3,16 @@ server:
 
 zuul:
    routes:
+      admin:
+         path: /admin
+         url: ${jor.httpSchema:http}://localhost:9000/
       simple:
          path: /simplestuff/**
-         url: http://localhost:8060/
+         url: ${jor.httpSchema:http}://localhost:8060/
+
+ie:
+   jor:
+      example:
+         configuration:
+            from: zuul-configServer-remote-repo 
+            

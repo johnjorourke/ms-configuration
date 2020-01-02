@@ -1,14 +1,20 @@
 spring:
    cloud:
       discovery:
-         enabled: true    # not essential but can be used to swtich overall discovery off. Defaults to true.
+         enabled: true
          
 eureka:
    client:
-      enabled: true   # can be used to switch eureka discovery on/off. Defaults to true.
+      enabled: true
       serviceUrl:
-         defaultZone: http://localhost:8761/eureka   # This is the default, needs to be specified if different.
+         defaultZone: ${jor.httpScheme:http}://${MS_EUREKA_HOST:localhost}:${MS_EUREKA_PORT:8761}/eureka      
       healthcheck:
          enabled: true       # ensures the application propogates the actuator /health to eureka. Only seems to work properly for UP/DOWN, not OUT_OF_SERVICE 
                              # This is done by registering a HealthCheckHandler bean (EurekaHealthCheckHandler) - if this property is true.
                              # EurekaHealthCheckHandler aggregates status from any HealthIndicators found in context and reports to eureka (UP/DOWN only)
+
+ie:
+   jor:
+      example:
+         configuration:
+            from: configServer-remote-repo                             
