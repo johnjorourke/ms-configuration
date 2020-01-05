@@ -5,7 +5,7 @@ zuul:
    routes:
       admin:
          path: /admin
-         url: ${jor.httpSchema:http}://localhost:9000/
+         url: ${jor.httpSchema:http}://localhost:9000/wallboard
       simple:
          path: /simplestuff/**
          url: ${jor.httpSchema:http}://localhost:8060/
