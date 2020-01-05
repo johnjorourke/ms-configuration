@@ -13,6 +13,12 @@ eureka:
                              # This is done by registering a HealthCheckHandler bean (EurekaHealthCheckHandler) - if this property is true.
                              # EurekaHealthCheckHandler aggregates status from any HealthIndicators found in context and reports to eureka (UP/DOWN only)
 
+management:   
+   endpoints:
+      web:
+         exposure:
+            include: "*"
+         
 ie:
    jor:
       example:
