@@ -1,3 +1,4 @@
+# register the service on eureka
 spring:
    cloud:
       discovery:
@@ -7,20 +8,41 @@ eureka:
    client:
       enabled: true
       serviceUrl:
-         defaultZone: ${jor.httpScheme:http}://${MS_EUREKA_HOST:localhost}:${MS_EUREKA_PORT:8761}/eureka      
+         defaultZone: ${MS_HTTP_SCHEME:http}://${MS_EUREKA_HOST:localhost}:${MS_EUREKA_PORT:8761}/eureka      
       healthcheck:
          enabled: true       # ensures the application propogates the actuator /health to eureka. Only seems to work properly for UP/DOWN, not OUT_OF_SERVICE 
                              # This is done by registering a HealthCheckHandler bean (EurekaHealthCheckHandler) - if this property is true.
                              # EurekaHealthCheckHandler aggregates status from any HealthIndicators found in context and reports to eureka (UP/DOWN only)
 
+# enable all actuator http endpoints
 management:   
    endpoints:
       web:
          exposure:
             include: "*"
          
+# set config location string
 ie:
    jor:
       example:
          configuration:
-            from: configServer-remote-repo                             
+            from: configServer-remote-repo
+            
+            
+---
+spring:
+   profiles: https
+
+eureka:
+   instance:
+      nonSecurePortEnabled: false
+      securePortEndabled: true
+      securePort: ${server.port}
+         
+server:
+   ssl:
+      enabled: true
+      keystore: ${MS_KEYSTORE_PATH:classpath:keystore.jks}
+      keystorePassword: ${MS_KEYSTORE_PASSWORD:password}
+      keyAlias: ${MS_KEYSTORE_ALIAS:localhost}
+            

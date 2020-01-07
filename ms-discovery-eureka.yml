@@ -1,0 +1,4 @@
+eureka:
+   instance:
+      hostname: ${MS_EUREKA_HOST:localhost}
+      
