@@ -1,4 +1,10 @@
+server:
+   port: ${MS_EUREKA_PORT:8761}
+
 eureka:
-   instance:
-      hostname: ${MS_EUREKA_HOST:localhost}
-      
+  instance:
+    hostname: ${MS_EUREKA_HOST:localhost}
+
+  client:
+    registerWithEureka: false
+    fetchRegistry: false

@@ -8,11 +8,7 @@ eureka:
    client:
       enabled: true
       serviceUrl:
-         defaultZone: ${MS_HTTP_SCHEME:http}://${MS_EUREKA_HOST:localhost}:${MS_EUREKA_PORT:8761}/eureka      
-      healthcheck:
-         enabled: true       # ensures the application propogates the actuator /health to eureka. Only seems to work properly for UP/DOWN, not OUT_OF_SERVICE 
-                             # This is done by registering a HealthCheckHandler bean (EurekaHealthCheckHandler) - if this property is true.
-                             # EurekaHealthCheckHandler aggregates status from any HealthIndicators found in context and reports to eureka (UP/DOWN only)
+         defaultZone: ${http.scheme:http}://${MS_EUREKA_HOST:localhost}:${MS_EUREKA_PORT:8761}/eureka      
 
 # enable all actuator http endpoints
 management:   
@@ -20,18 +16,13 @@ management:
       web:
          exposure:
             include: "*"
-         
-# set config location string
-ie:
-   jor:
-      example:
-         configuration:
-            from: configServer-remote-repo
-            
             
 ---
 spring:
-   profiles: https
+   profiles: ssl
+
+http:
+   scheme: https
 
 eureka:
    instance:

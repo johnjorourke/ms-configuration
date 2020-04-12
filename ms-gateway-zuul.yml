@@ -5,10 +5,10 @@ zuul:
    routes:
       admin:
          path: /admin
-         url: ${jor.httpSchema:http}://localhost:9000/wallboard
+         url: ${http.scheme:http}://localhost:9000/wallboard
       simple:
          path: /simplestuff/**
-         url: ${jor.httpSchema:http}://localhost:8060/
+         url: ${http.scheme:http}://localhost:8060/ #TODO use discovery - should be no need for port
 
 ie:
    jor:

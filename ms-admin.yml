@@ -1,2 +1,2 @@
 server:
-   port: 9000
+   port: ${MS_ADMIN_PORT:9000}
