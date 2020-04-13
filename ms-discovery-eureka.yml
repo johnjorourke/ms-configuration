@@ -6,5 +6,5 @@ eureka:
     hostname: ${MS_EUREKA_HOST:localhost}
 
   client:
-    registerWithEureka: true
+    registerWithEureka: false
     fetchRegistry: false
