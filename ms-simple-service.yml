@@ -1,10 +1,11 @@
 server:
+   address: "192.168.99.1"
    port: 8060
          
 eureka:
-   instance:
-      hostname: "192.168.99.1"
-      
+#   instance:
+#      hostname: "192.168.99.1"
+
    client:
       healthcheck:
          enabled: true       # ensures the application propogates the actuator /health to eureka. Only seems to work properly for UP/DOWN, not OUT_OF_SERVICE 
