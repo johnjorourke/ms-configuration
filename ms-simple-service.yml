@@ -1,10 +1,9 @@
 server:
-   address: "192.168.99.1"
    port: 8060
          
 eureka:
-#   instance:
-#      hostname: "192.168.99.1"
+   instance:
+      hostname: "192.168.99.1"
 
    client:
       healthcheck:
