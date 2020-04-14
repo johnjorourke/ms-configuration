@@ -3,7 +3,8 @@ server:
          
 eureka:
    instance:
-      hostname: 192.168.99.1
+      preferIpAddress: true
+      #hostname: 192.168.99.1
 
    client:
       healthcheck:
