@@ -1,8 +1,6 @@
 server:
    port: ${MS_ADMIN_PORT:9000}
 
-#eureka:
-#   instance:
-#      leaseRenewalIntervalInSeconds: 10
-#   client:
-#      registryFetchIntervalSeconds: 5
+eureka:
+   client:
+      registryFetchIntervalSeconds: 5
