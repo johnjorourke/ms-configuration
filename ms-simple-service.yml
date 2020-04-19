@@ -4,7 +4,7 @@ server:
 eureka:
    instance:
       preferIpAddress: true
-      #hostname: 192.168.99.1
+      #hostname: localhost
 
    client:
       healthcheck:

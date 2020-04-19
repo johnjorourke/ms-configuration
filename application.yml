@@ -1,9 +1,10 @@
-# register the service on eureka
+# set service discovery enabled
 spring:
    cloud:
       discovery:
          enabled: true
-         
+
+# register the service on eureka
 eureka:
    client:
       enabled: true
