@@ -1,14 +1,18 @@
 server:
    port: 8080
 
+eureka:
+  instance:
+    hostname: ${MS_GATEWAY_HOST:localhost}   
+
 zuul:
    routes:
       admin:
          path: /admin
-         url: ${http.scheme:http}://localhost:9000/wallboard
+         url: ${http.scheme:http}://${MS_ADMIN_HOST:localhost}:${MS_ADMIN_PORT:9000}/wallboard
       simple:
          path: /simplestuff/**
-         url: ${http.scheme:http}://localhost:8060/ #TODO use discovery - should be no need for port
+         url: ${http.scheme:http}://${MS_SIMPLE_HOST:localhost}:${MS_SIMPLE_PORT:8060}/ #TODO use discovery - should be no need for port
 
 ie:
    jor:
