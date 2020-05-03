@@ -2,8 +2,8 @@ server:
    port: 8080
 
 eureka:
-  instance:
-    hostname: ${MS_GATEWAY_HOST:localhost}   
+   instance:
+      hostname: ${MS_GATEWAY_HOST:localhost}   
 
 zuul:
    routes:
