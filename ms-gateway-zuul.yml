@@ -12,7 +12,7 @@ zuul:
          url: ${http.scheme:http}://${MS_ADMIN_HOST:localhost}:${MS_ADMIN_PORT:9000}/wallboard
       simple:
          path: /simplestuff/**
-         url: ${http.scheme:http}://${MS_SIMPLE_HOST:localhost}:${MS_SIMPLE_PORT:8060}/ #TODO use discovery - should be no need for port
+         serviceId: MS-SIMPLE-SERVICE
 
 ie:
    jor:
