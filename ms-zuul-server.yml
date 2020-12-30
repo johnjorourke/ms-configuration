@@ -6,9 +6,9 @@ zuul:
       echo:
          path: /echo/**
          serviceId: MS-ECHO-SERVICE
- #     simplestuff:
- #        path: /simplestuff/**
- #        serviceId: MS-SIMPLE-SERVICE
+      simplestuff:
+         path: /simplestuff/**
+         serviceId: MS-SIMPLE-SERVICE
 
 ie:
    jor:
