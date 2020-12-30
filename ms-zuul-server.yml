@@ -12,7 +12,7 @@ zuul:
          serviceId: MS-ECHO-SERVICE
       simple:
          path: /simplestuff/**
-         serviceId: MS-SIMPLE-SERVICE
+         serviceId: MS-ECHO-SERVICE
 
 ie:
    jor:
