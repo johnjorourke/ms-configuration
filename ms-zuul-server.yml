@@ -2,8 +2,8 @@ server:
    port: ${MS_PORT:8080}
 
 eureka:
-   instance:
-      hostname: ${MS_HOST:localhost}   
+   client:
+      fetchRegistry: true   
 
 zuul:
    routes:
