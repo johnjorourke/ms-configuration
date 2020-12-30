@@ -10,7 +10,7 @@ zuul:
       echox:
          path: /echo/**
          serviceId: MS-ECHO-SERVICE
-      simple:
+      simplestuff:
          path: /simplestuff/**
          serviceId: MS-ECHO-SERVICE
 
