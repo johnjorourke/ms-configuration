@@ -1,9 +1,6 @@
 server:
-   port: ${MS_ADMIN_PORT:9000}
+   port: ${MS_PORT:9000}
 
 eureka:
-   instance:
-      hostname: ${MS_ADMIN_HOST:localhost}
-   
    client:
       registryFetchIntervalSeconds: 5

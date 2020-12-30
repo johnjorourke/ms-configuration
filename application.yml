@@ -3,6 +3,8 @@ eureka:
    client:
       serviceUrl:
          defaultZone: ${http.scheme:http}://${MS_EUREKA_HOST:localhost}:${MS_EUREKA_PORT:8761}/eureka      
+   instance:
+      hostname: ${MS_HOST:localhost}
 
 # enable all actuator http endpoints
 management:   
