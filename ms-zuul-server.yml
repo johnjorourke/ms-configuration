@@ -9,7 +9,7 @@ zuul:
    routes:
       echo:
          path: /echo/**
-         serviceId: MS-ECHO=SERVICE
+         serviceId: MS-ECHO-SERVICE
       simple:
          path: /simplestuff/**
          serviceId: MS-SIMPLE-SERVICE
