@@ -7,7 +7,7 @@ eureka:
 
 zuul:
    routes:
-      echo:
+      echox:
          path: /echo/**
          serviceId: MS-ECHO-SERVICE
       simple:
