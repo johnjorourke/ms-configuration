@@ -8,6 +8,9 @@ eureka:
 
 # enable all actuator http endpoints
 management:   
+   endpoint:
+      logfile:
+         external-file: ./logs/${spring.application.name:service}.log
    endpoints:
       web:
          exposure:
