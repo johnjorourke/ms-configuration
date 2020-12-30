@@ -4,5 +4,6 @@ server:
 eureka:
    instance:
       hostname: ${MS_ADMIN_HOST:localhost}
+   
    client:
       registryFetchIntervalSeconds: 5

@@ -15,4 +15,4 @@ ie:
    jor:
       example:
          configuration:
-            from: configServer-remote-repo
+            from: remote:ms-simple-service.yml

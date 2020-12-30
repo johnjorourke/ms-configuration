@@ -1,5 +1,5 @@
 server:
-   port: 8080
+   port: ${MS_GATEWAY_PORT:8080}
 
 eureka:
    instance:
@@ -10,6 +10,9 @@ zuul:
       admin:
          path: /admin
          url: ${http.scheme:http}://${MS_ADMIN_HOST:localhost}:${MS_ADMIN_PORT:9000}/wallboard
+      echo:
+         path: /echo/**
+         serviceId: MS-ECHO=SERVICE
       simple:
          path: /simplestuff/**
          serviceId: MS-SIMPLE-SERVICE
@@ -18,5 +21,5 @@ ie:
    jor:
       example:
          configuration:
-            from: zuul-configServer-remote-repo 
+            from: remote:ms-gateway-zuul.yml 
             
