@@ -3,7 +3,7 @@ server:
 
 zuul:
    routes:
-      echo:
+      echo-service:
          path: /echo/**
          serviceId: MS-ECHO-SERVICE
       simplestuff:
